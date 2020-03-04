@@ -1,0 +1,12 @@
+20.83992-8
+
+Eduardo Cabral
+elcabral@maua.br
+
+imt.mrooms.net
+Inteligência Artificial e Deep Learning
+iadl-2020
+
+catalogo de imagens Amazon: imagem-net
+
+rede neural para tradução com quadrilhoes de parametros (pesquisar)
