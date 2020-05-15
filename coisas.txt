@@ -10,3 +10,5 @@ iadl-2020
 catalogo de imagens Amazon: imagem-net
 
 rede neural para tradução com quadrilhoes de parametros (pesquisar)
+
+https://pandas.pydata.org/docs/getting_started/comparison/comparison_with_sql.html
