@@ -1,0 +1,7 @@
+- scanear papel de retorno do cliente
+- clusterização de clientes para enviar cada roupa (usando diversas features separadas)
+- clusterização de roupas para enviar para cada cliente
+- modelo de proxima compra do cliente
+- analise de estoque (mandar roupa agora ou esperar o estoque encher)
+- diminuir risco de roubo
+- logistica de peças para caber na bag

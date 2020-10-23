@@ -1,0 +1,5 @@
+https://www.kaggle.com/olistbr/brazilian-ecommerce
+https://www.kaggle.com/olistbr/marketing-funnel-olist
+https://www.kaggle.com/andrewmvd/trip-advisor-hotel-reviews
+https://www.kaggle.com/matheusfreitag/gas-prices-in-brazil
+https://www.kaggle.com/ramirobentes/flights-in-brazil

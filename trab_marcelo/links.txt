@@ -1,0 +1,10 @@
+dataset:
+https://www.kaggle.com/olistbr/brazilian-ecommerce
+
+meu notebook:
+https://www.kaggle.com/pigortekids/projeto-2sem-pos/edit
+
+notebook Marcelo:
+https://www.kaggle.com/marcelolafeta/olist-data-preparation
+
+horario da aula 2:00:00
