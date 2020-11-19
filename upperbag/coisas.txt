@@ -5,3 +5,8 @@
 - analise de estoque (mandar roupa agora ou esperar o estoque encher)
 - diminuir risco de roubo
 - logistica de peças para caber na bag
+
+
+- estado da pessoa para saber se ela quer comprar ou não
+- escolher o produto que a pessoa quer por nota de pessoas parecidas com ela
+- predizer quando precisa comprar mais roupas

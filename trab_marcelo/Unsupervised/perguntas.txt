@@ -1,0 +1,1 @@
+fazer no power bi e depois reproduzir no pandas ou só printar io power bi? -> se ficar mais facil, tira print

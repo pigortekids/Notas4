@@ -1,0 +1,9 @@
+- acho interessante mostrar algumas perguntas pela média de:
+	- itens comprados
+	- valor final
+	- bags enviadas
+- Campo Por que quer uma Bag
+	- https://community.powerbi.com/t5/Desktop/Multiple-choices-answer-count/m-p/162754#M70883
+- juntei as tabelas pelo Nome do cliente (que eu renomiei pra id_cliente)
+- lembrar de filtrar algum dos campos que fica vazio para obter o resumido (eu usei o codigo da bag)
+- fazer tanto pra feminino quanto masculino

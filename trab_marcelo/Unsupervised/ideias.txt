@@ -1,0 +1,4 @@
+ordenar pelo que mais vendeu / mais lucrou
+ver correlação de venda do cara com a cidade de cliente
+ordenar pelos melhores reviews
+entrega perto da estimativa

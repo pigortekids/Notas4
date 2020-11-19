@@ -1,4 +1,4 @@
-mostrar os testes que eu fiz para chegar nisso (valores)
-mostrar que ele da overfit e depois colocar menos epocas ou deixar direto com menos epocas
+mostrar os testes que eu fiz para chegar nisso (valores) -> deixar tudo ai
+mostrar que ele da overfit e depois colocar menos epocas ou deixar direto com menos epocas? -> mostrar tudo e explicar
 se eu deixo os labels 1 ate 5 em vez de 0 a 4 da merda?
-separar os notebooks?
+separar os notebooks? -> separar
