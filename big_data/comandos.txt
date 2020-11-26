@@ -1,0 +1,87 @@
+sudo su
+cp -R media/sf_big_data/arquivos/ home/hadoop/Downloads/arquivos/
+cd home/hadoop/Downloads/
+chmod -R 777 arquivos
+exit
+cd arquivos
+
+jps -> ver programas que estão rodando
+start-dfs.sh -> inicializa o name node e os data nodes
+start-yarn.sh -> inicializa o Yarn
+pyspark
+spark-shell
+
+hdfs dfs -mkdir /bolsa
+hdfs dfs -mkdir /bolsa/contratos/
+hadoop fs -put descompactado/*.TXT /bolsa/contratos/
+hdfs dfs -mkdir /bolsa/corretoras/
+hadoop fs -put corretoras.txt /bolsa/corretoras/
+hdfs dfs -mkdir /bolsa/feriados/
+hadoop fs -put feriadosBR.csv /bolsa/feriados/
+
+beeline -> starta Hive
+!connect jdbc:hive2:// -> conecta no console do hive (sem usuario nem senha)
+!exit
+set hive.execution.engine=spark;
+set hive.execution.engine=mr;
+set hive.exec.dynamic.partition=true;
+set hive.exec.dynamic.partition.mode=nostrict;
+
+SHOW DATABASES;
+CERATE DATABASE [db_name];
+DROP DATABASE [db_name] [CASCADE]; -> user o CASCADE quando o database nao está vazio
+USE [db_name];
+SHOW TABLES;
+DESCRIBE [tb_name];
+
+CREATE EXTERNAL TABLE [tb_name] (
+[col_name] [col_type], ...)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+TBLPROPERTIES( "skip.header.line.count"="1" );
+#LOCATION '[path]';
+
+LOAD DATA INPATH '[path]'
+INTO TABLE [tb_name];
+
+SELECT * FROM [tb_name1]
+JOIN [tb_name2] ON ( [tb_name1][col_id] = [tb_name2][col_id] );
+
+CREATE TEMPORARY TABLE [tb_name] AS [select_command];
+
+
+
+
+
+
+
+
+
+0: jdbc:hive2://> set mapreduce.map.memory.mb
+. . . . . . . . > ;
++-----------------------------+
+|             set             |
++-----------------------------+
+| mapreduce.map.memory.mb=-1  |
++-----------------------------+
+1 row selected (0,011 seconds)
+0: jdbc:hive2://> set mapreduce.map.memory.mb=4;
+No rows affected (0,019 seconds)
+0: jdbc:hive2://> set mapreduce.map.memory.mb;
++----------------------------+
+|            set             |
++----------------------------+
+| mapreduce.map.memory.mb=4  |
++----------------------------+
+
+
+
+0: jdbc:hive2://> set mapreduce.map.java.opts;
++---------------------------------------+
+|                  set                  |
++---------------------------------------+
+| mapreduce.map.java.opts is undefined  |
++---------------------------------------+
+1 row selected (0,005 seconds)
+0: jdbc:hive2://> set mapreduce.map.java.opts=-Xmx6144m;
