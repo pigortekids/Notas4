@@ -1,0 +1,99 @@
+CREATE EXTERNAL TABLE tb_contratos (
+dt DATE
+,simbolo VARCHAR(50)
+,numero_negocio INT
+,preco FLOAT
+,qnt INT
+,hr CHAR(12)
+,indicador_anulacao BINARY
+,data_oferta_compra DATE
+,numero_seq_compra BIGINT
+,numero_geracao_compra INT
+,codigo_id_compra TINYINT
+,data_oferta_venda DATE
+,numero_seq_venda BIGINT
+,numero_geracao_venda INT
+,codigo_id_venda TINYINT
+,indicador_direto BINARY
+,corretora_compra INT
+,corretora_venda INT
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ';'
+STORED AS TEXTFILE
+TBLPROPERTIES( "skip.header.line.count"="1"
+,"skip.footer.line.count"="2" );
+
+LOAD DATA INPATH '/bolsa/contratos/NEG_BMF_20180702.TXT'
+INTO TABLE tb_contratos;
+
+CREATE TABLE tb_contratos_partition (
+simbolo VARCHAR(50)
+,numero_negocio INT
+,preco FLOAT
+,qnt INT
+,hr CHAR(12)
+,indicador_anulacao BINARY
+,data_oferta_compra DATE
+,numero_seq_compra INT
+,numero_geracao_compra INT
+,codigo_id_compra TINYINT
+,data_oferta_venda DATE
+,numero_seq_venda INT
+,numero_geracao_venda INT
+,codigo_id_venda TINYINT
+,indicador_direto BINARY
+,corretora_compra INT
+,corretora_venda INT
+)
+PARTITIONED BY (dt DATE);
+
+INSERT OVERWRITE TABLE tb_contratos_partition
+SELECT * FROM tb_contratos;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE EXTERNAL TABLE tb_contratos_test (
+dt DATE
+,simbolo VARCHAR(50)
+,numero_negocio INT
+,preco FLOAT
+,qnt INT
+,hr VARCHAR(12)
+,indicador_anulacao BINARY
+,data_oferta_compra DATE
+,numero_seq_compra BIGINT
+,numero_geracao_compra INT
+,codigo_id_compra TINYINT
+,data_oferta_venda DATE
+,numero_seq_venda BIGINT
+,numero_geracao_venda INT
+,codigo_id_venda TINYINT
+,indicador_direto BINARY
+,corretora_compra INT
+,corretora_venda INT
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ';'
+STORED AS TEXTFILE
+TBLPROPERTIES( "skip.header.line.count"="1"
+,"skip.footer.line.count"="2" );
