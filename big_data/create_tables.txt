@@ -1,10 +1,24 @@
-CREATE EXTERNAL TABLE tb_contratos (
-dt DATE
+############ create corretora ############
+CREATE EXTERNAL TABLE tb_corretoras (
+cd_corretora INT
+,nm_corretora VARCHAR(50)
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+############ insert corretora ############
+LOAD DATA INPATH '/bolsa/corretoras/corretoras.txt'
+INTO TABLE tb_corretoras;
+
+############ create insert contratos stage ############
+CREATE EXTERNAL TABLE tb_stg_contratos (
+data DATE
 ,simbolo VARCHAR(50)
 ,numero_negocio INT
 ,preco FLOAT
-,qnt INT
-,hr CHAR(12)
+,quantidade INT
+,hora CHAR(12)
 ,indicador_anulacao BINARY
 ,data_oferta_compra DATE
 ,numero_seq_compra BIGINT
@@ -15,70 +29,23 @@ dt DATE
 ,numero_geracao_venda INT
 ,codigo_id_venda TINYINT
 ,indicador_direto BINARY
-,corretora_compra INT
-,corretora_venda INT
+,cd_corretora_compra INT
+,cd_corretora_venda INT
 )
 ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ';'
+FIELDS TERMINATED BY '\073'
 STORED AS TEXTFILE
+LOCATION '/bolsa/contratos/'
 TBLPROPERTIES( "skip.header.line.count"="1"
 ,"skip.footer.line.count"="2" );
 
-LOAD DATA INPATH '/bolsa/contratos/NEG_BMF_20180702.TXT'
-INTO TABLE tb_contratos;
-
-CREATE TABLE tb_contratos_partition (
+############ create contratos ############
+CREATE TABLE tb_contratos (
 simbolo VARCHAR(50)
 ,numero_negocio INT
 ,preco FLOAT
-,qnt INT
-,hr CHAR(12)
-,indicador_anulacao BINARY
-,data_oferta_compra DATE
-,numero_seq_compra INT
-,numero_geracao_compra INT
-,codigo_id_compra TINYINT
-,data_oferta_venda DATE
-,numero_seq_venda INT
-,numero_geracao_venda INT
-,codigo_id_venda TINYINT
-,indicador_direto BINARY
-,corretora_compra INT
-,corretora_venda INT
-)
-PARTITIONED BY (dt DATE);
-
-INSERT OVERWRITE TABLE tb_contratos_partition
-SELECT * FROM tb_contratos;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-CREATE EXTERNAL TABLE tb_contratos_test (
-dt DATE
-,simbolo VARCHAR(50)
-,numero_negocio INT
-,preco FLOAT
-,qnt INT
-,hr VARCHAR(12)
+,quantidade INT
+,hora CHAR(12)
 ,indicador_anulacao BINARY
 ,data_oferta_compra DATE
 ,numero_seq_compra BIGINT
@@ -89,11 +56,30 @@ dt DATE
 ,numero_geracao_venda INT
 ,codigo_id_venda TINYINT
 ,indicador_direto BINARY
-,corretora_compra INT
-,corretora_venda INT
+,cd_corretora_compra INT
+,cd_corretora_venda INT
 )
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ';'
-STORED AS TEXTFILE
-TBLPROPERTIES( "skip.header.line.count"="1"
-,"skip.footer.line.count"="2" );
+PARTITIONED BY (data DATE);
+
+############ insert contratos ############
+INSERT INTO TABLE tb_contratos PARTITION (data)
+SELECT 
+simbolo
+,numero_negocio
+,preco
+,quantidade
+,hora
+,indicador_anulacao
+,data_oferta_compra
+,numero_seq_compra
+,numero_geracao_compra
+,codigo_id_compra
+,data_oferta_venda
+,numero_seq_venda
+,numero_geracao_venda
+,codigo_id_venda
+,indicador_direto
+,cd_corretora_compra
+,cd_corretora_venda
+,data
+FROM tb_stg_contratos;

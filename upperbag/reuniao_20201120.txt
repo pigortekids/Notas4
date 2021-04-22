@@ -1,0 +1,8 @@
+disponibilizar de alguma forma o Power BI
+adicionar filtro tamanho no Power BI
+
+tamanho
+idade
+ticket medio
+conversão valor
+conversão itens

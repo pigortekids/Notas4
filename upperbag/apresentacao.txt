@@ -1,0 +1,59 @@
+Apresentação:
+	Igor 1º slide (Projeto)
+	- falar de deixar as perguntas pro final
+	Fernanda:
+		2º slide (Agenda):
+			- breve agenda
+			- objetivo do projeto
+			- passa rapidamente por cada uma das etapas
+		3º slide (Introdução):
+			- proposta da upperbag
+			- objetivo de construir cluster para recomendação
+			- entender os gostos
+		4º slide (DS process):
+			- relembrando de forma macro
+			- solução machine lerning
+			- passa rapidamente por cada uma das etapas
+		5º slide (análise exploratoria):
+			- o processo que tivemos foi...
+			- passa rapidamente por cada uma das etapas
+	Tegão:
+		6º slide (clusterização):
+			- depois da análise
+			- construção do modelo
+			- separar clientes (clusters)
+			- entender melhores produtos
+			- recomendar produtos
+		7º slide (RFP):
+			- feita a partir de 3 variaveis
+			- recencia (quão recente cliente realizou a compra)
+			- frequencia (de quanto em quanto, sazionalidade)
+			- rentabilidade (em cima do mkup)
+			- kmeans separou em 3 clusters
+			- engajados (compram com frequencia e tem bastante rentabilidade)
+			- recentes (compram pouco mas compraram a pouco tempo)
+			- desengajados (metade dos clientes, nao traz rentabilidade)
+PowerBI
+	Rodrigo:
+		1º pagina (introdução):
+			- introdução basica
+			- feito para mostrar venda vs estoque, entedimento do cliente e cluster
+		2º pagina (estoque):
+			- passa pelos graficos explicando breveamente
+		3º pagina (situação estoque):
+			- explicação breve do grafico em arvore
+		4º pagina (situação vendas):
+			- quebra de categorias e marca, mas e fem
+			- distribuição de media de idades
+	Igor:
+		páginas de perguntas e demografia:
+			- para entender melhor o cliente
+			- olhamos perguntas que achamos importantes
+			- olhamos a informações demograficas importantes
+		página cluster engajados:
+			- pegamos apenas o cluster engajados
+			- olhamos quantidade por produto e marca
+			- olhamos receita por produto e marca
+Apresentação:
+		9º slide (considerações):
+			- antes de fazer uma analise é bom ter um controle bom

@@ -1,0 +1,55 @@
+- alugar uma máquina mac na cloud:
+https://www.macincloud.com/
+
+- codar flutter na web:
+https://codepen.io/pen/editor/flutter
+
+- paleta de cores:
+https://color-hex.com/color-palettes
+
+- flutter lite
+https://pub.dev/packages/tflite
+
+- imagens sem direito autoral
+https://unsplash.com
+
+- roadmap para aprendizado em flutter:
+https://github.com/olexale/flutter_roadmap
+
+- widgets:
+https://github.com/Solido/awesome-flutter
+
+- Dart:
+https://dart.dev/
+https://dartpad.dartlang.org/
+
+- comunidade br de flutter:
+https://flutterando.com.br/#/
+
+- case do nubank:
+https://cdn.nubank.com.br/mobile/taskforce/nubank-mobile-architecture-task-force-mission-report.pdf
+
+- youtube flutter:
+https://www.youtube.com/channel/UCwXdFgeE9KYzlDdR7TG9cMw
+https://www.youtube.com/playlist?list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG
+https://www.youtube.com/watch?v=eikOZzfc0l4&list=PLjxrf2q8roU3ahJVrSgAnPjzkpGmL9Czl
+
+- github Murilo:
+https://github.com/Murilo-ZC/Pos-Maua-2021-1-UI-IA
+	1 - primeiro_projeto_flutter
+	2 - stateless_widget_app
+	3 - app_flutter_varias_telas
+	4 - list_view_intro
+	5 - app_via_cep
+
+- exemplo de UIs de flutter:
+https://flutter.dev/docs/development/ui/layout
+https://dribbble.com/tags/app_inspiration
+https://www.tempest.house/blog-posts/the-beauty-of-neumorphic-ui-design-patterns
+https://cc-cdn.adobe.com/ccdesktop/cc-libraries-starter-kits/
+https://www.adobe.com/br/products/xd/pricing/individual.html
+https://www.canva.com/pt_br/
+https://affinity.serif.com/pt-br/designer/
+
+- subir aplicação para teste:
+https://sheety.co/
