@@ -1,0 +1,55 @@
+import ballerina/http;
+
+service / on new http:Listener(8090) {
+
+    resource function get endereco/[string CEP](http:Caller caller, http:Request request) returns error? {
+
+        // https://ballerina.io/learn/by-example/http-client-endpoint
+        http:Client viacepEndpoint = check new ("http://viacep.com.br/ws");
+
+        json endereco_json = check viacepEndpoint->get("/" + CEP + "/json/", targetType = json);
+
+        string logradouro = check endereco_json.logradouro;
+        string complemento = check endereco_json.complemento;
+        string localidade = check endereco_json.localidade;
+        string uf = check endereco_json.uf;
+        string cep = check endereco_json.cep;
+        json payload = {endereco: logradouro + ", " + complemento + " - " + localidade + " - " + uf + ", " + cep};
+
+        http:Response resp = new;
+        resp.statusCode = 200;
+        resp.setPayload(payload);
+        check caller->respond(resp);
+    }
+
+    resource function get frase/anime(http:Caller caller, http:Request request) returns error? {
+
+        http:Client animeEndpoint = check new ("https://animechan.vercel.app/api/random");
+
+        json resposta = check animeEndpoint->get("/", targetType = json);
+
+        string quote = check resposta.quote;
+        json payload = {frase: quote};
+
+        http:Response resp = new;
+        resp.statusCode = 200;
+        resp.setPayload(payload);
+        check caller->respond(resp);
+    }
+
+    resource function get bitcoin/value(http:Caller caller, http:Request request) returns error? {
+
+        http:Client cryptoEndpoint = check new ("https://api.coinlore.net/api/ticker/?id=90");
+
+        string resposta = check cryptoEndpoint->get("/", targetType = string);
+
+        json payload = {cotacao: resposta};
+
+        http:Response resp = new;
+        resp.statusCode = 200;
+        resp.setPayload(payload);
+        check caller->respond(resp);
+
+    }
+
+}

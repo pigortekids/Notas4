@@ -1,0 +1,88 @@
+dados abertos gov:
+https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados
+
+databricks:
+https://community.cloud.databricks.com/login.html
+
+notebooks:
+	aula 1:
+https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/7944774244956345/4000642804811851/4732804744009568/latest.html
+	aula 2:
+https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/7944774244956345/1212414686467540/4732804744009568/latest.html
+	aula 3:
+https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/7944774244956345/1565283735553624/4732804744009568/latest.html
+
+spreadsheets prof:
+https://docs.google.com/spreadsheets/d/1Uyms3tgyzoBXwn-b1qQ0eFeJOKuRcS-bIWdr801VBhw/edit#gid=0
+https://docs.google.com/spreadsheets/d/1py1QID25e7h_5t0EkWkjMOFFbvGCDYeH4gQiwG8EIQA/edit?usp=sharing
+
+dms prof:
+dm_curso: https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/7944774244956345/1565283735553656/4732804744009568/latest.html
+​dm_aluno_completo: https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/7944774244956345/1565283735553624/4732804744009568/latest.html
+dm_docente: https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/7944774244956345/1565283735553660/4732804744009568/latest.html
+dm_ies: https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/7944774244956345/1565283735553664/4732804744009568/latest.html
+dm_local_oferta: https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/7944774244956345/1565283735553670/4732804744009568/latest.html
+
+
+
+
+
+trabs:
+	- Rafael Godoy:
+		- docente:
+https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2423258935339755/929105422077892/7259236811027902/latest.html
+
+	- Shanderson:
+		- ies:
+https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/6052119698775727/8979862073984/4528813396451388/latest.html
+
+	- Fernanda:
+		- ofertas:
+https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2618353429540667/1786239524041604/7109121523727023/latest.html
+
+	- Giovanni:
+		- alunos:
+https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/141538474706907/3470541801056555/2825509372103837/latest.html
+		- cursos:
+https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/141538474706907/3410972036665353/2825509372103837/latest.html
+
+
+git:
+https://github.com/leobiscassi/educacao
+
+dunder methods:
+https://dbader.org/blog/python-dunder-methods
+
+Airflow:
+https://airflow.apache.org/docs/apache-airflow/stable/start/local.html
+
+rodando Airflow:
+airflow db init
+airflow users create \
+    --username admin \
+    --firstname Igor \
+    --lastname Correa \
+    --role Admin \
+    --email igor.a.correa@hotmail.com
+
+em uma shell rodar o web server:
+airflow webserver --port 8080
+
+em outra shell rodar o scheduler:
+airflow scheduler
+
+entrar em http://localhost:8080/
+
+lembrar que as datas das DAGs o horário fica em UTC (estamos em UTC-3)
+sempre que for colocar pra rodar, tem que ativar a DAG na página principal
+https://crontab.guru/
+https://airflow.apache.org/docs/apache-airflow/stable/dag-run.html#backfill
+
+
+Página oficial do scrapy: https://scrapy.org/
+Splash para lidar com javascript no scrapy: https://www.zyte.com/blog/handling-javascript-in-scrapy-with-splash/
+Selenium: https://www.selenium.dev/documentation/en/
+
+scrapy comandos:
+scrapy startproject [nome]
+scrapy crawl [nome]

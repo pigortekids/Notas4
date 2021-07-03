@@ -1,0 +1,91 @@
+hospedagem gratuita:
+https://br.000webhost.com/
+- senha site: Pt%fU3yTog$Gm6VujYMf
+
+analisar transmissoes das portas do PC:
+https://www.wireshark.org/
+
+lista de APIs:
+https://www.programmableweb.com/category/all/apis
+
+Fast API:
+https://fastapi.tiangolo.com/
+
+abrir um git bash em uma pasta qualquer desejada
+criar um virtualenv com o comando "virtual env [nome]"
+executar o comando "source [nome]/Scripts/activate"
+com o ambiente ativado, qualquer coisa instalada será mantida apenas nesse ambiente
+ir até a pasta onde sua aplicação está com os arquivos e executar "uvicorn [nome_main]:app --reload"
+entrar no caminho http://127.0.0.1:8000 para ver o site
+entrar no caminho http://127.0.0.1:8000/docs ou http://127.0.0.1:8000/redoc para ver uma documentacao da API
+
+Postman online:
+https://reqbin.com/
+
+deploy API:
+https://fastapi.tiangolo.com/deployment/deta/
+
+abrir powershell do windows e rodar "deta login"
+na pasta com o main.py e o requirements.txt rodar "deta new"
+com isso funcionando entrar no site e pegar io link na esquerda em cima e testar
+
+imagem nginx:
+https://hub.docker.com/_/nginx
+docker run --name meu-primeiro-nginx -v ./bolinhas:/usr/share/nginx/html:ro -p 8080:80 -d nginx
+
+imagem de fastapi:
+https://hub.docker.com/r/tiangolo/uvicorn-gunicorn-fastapi
+
+comandos de docker:
+docker pull tiangolo/uvicorn-gunicorn-fastapi
+docker run -d --name [nome_container] -p 80:80 [imagem]
+localhost para ver o resultado
+docker ps -a
+docker exec -it [container_id] /bin/bash
+docker stop [container_id]
+docker start [container_id]
+docker commit -c "EXPOSE 80" [nome_container] [usuario]/[nome_imagem]:[tag]
+docker images
+docker login
+docker image push [usuario]/[nome_imagem]:[tag]
+docker history [container_id]
+docker login azure
+docker build -t [imagem] . (https://docs.docker.com/engine/reference/builder/)
+docker network ls
+docker network inspect [network_id]
+docker create [network_name]
+docker compose up -d
+
+azure:
+instancias de container
+criar instancia de container
+na "imagem" colocar [usuario]/[nome_imagem]:[tag]
+em "rotulo do nome DNS" colocar um nome
+liberar a porta 80
+pegar o FQDN e jogar no navegador para ver resultado
+az login
+az login --use-device-code
+az container exec --resource-group [grupo] --name [nome_container] --exec-command "/bin/bash"
+
+instalar azure CLI:
+https://docs.microsoft.com/pt-br/cli/azure/install-azure-cli
+
+exemplo:
+https://github.com/FeTPiva/fast_example
+
+Docker compose:
+https://circleci.com/blog/what-is-yaml-a-beginner-s-guide/
+https://docs.docker.com/compose/
+https://github.com/docker/awesome-compose
+
+load balance:
+https://docs.microsoft.com/pt-pt/azure/traffic-manager/traffic-manager-load-balancing-azure
+
+kong:
+https://github.com/Kong/docker-kong
+
+konga:
+https://github.com/pantsel/konga
+
+WSO2:
+https://wso2.com/
